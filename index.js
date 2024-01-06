@@ -2,6 +2,9 @@ const app=require('./middlewares/middlewares')
 const Dbconnect = require('./database/db')
 Dbconnect()
 
+app.get('/',(req,res)=>{
+    res.send('hello app')
+})
 
 
 app.listen(process.env.PORT, () => {
